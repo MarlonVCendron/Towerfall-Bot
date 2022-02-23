@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="42">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>7</ID>
+      <Description>"Player 1 X"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"THREADSTACK0"-00000994</Address>
+      <Offsets>
+        <Offset>54</Offset>
+        <Offset>8</Offset>
+        <Offset>20</Offset>
+        <Offset>C</Offset>
+        <Offset>1B0</Offset>
+        <Offset>8</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"Player 1 Y"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"THREADSTACK0"-0000089C</Address>
+      <Offsets>
+        <Offset>58</Offset>
+        <Offset>C</Offset>
+        <Offset>104</Offset>
+        <Offset>54</Offset>
+        <Offset>28</Offset>
+        <Offset>1C</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>21</ID>
+      <Description>"Player 2 X"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"THREADSTACK0"-00000994</Address>
+      <Offsets>
+        <Offset>B4</Offset>
+        <Offset>34</Offset>
+        <Offset>4</Offset>
+        <Offset>24</Offset>
+        <Offset>C</Offset>
+        <Offset>98</Offset>
+        <Offset>10</Offset>
+        <Offset>318</Offset>
+        <Offset>8</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>14</ID>
+      <Description>"Player 2 Y"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"THREADSTACK0"-00000980</Address>
+      <Offsets>
+        <Offset>4C</Offset>
+        <Offset>10</Offset>
+        <Offset>0</Offset>
+        <Offset>50</Offset>
+        <Offset>4</Offset>
+        <Offset>32C</Offset>
+        <Offset>0</Offset>
+        <Offset>240</Offset>
+        <Offset>A0</Offset>
+      </Offsets>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
