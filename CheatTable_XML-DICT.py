@@ -17,13 +17,13 @@ def main():
         offset_thread = int(address_text.split('-')[1], 16)
         address = threadstack0 - offset_thread
 
-        offsets_array = []
+        offsets_list = []
         for offset in offsets:
-            offsets_array.append(int(offset.get_text(), 16))
+            offsets_list.append(int(offset.get_text(), 16))
 
         variable_name = description.replace(" ", "").lower()
         data[variable_name] = {}
-        data[variable_name]['offsets'] = list(reversed(offsets_array))
+        data[variable_name]['offsets'] = list(reversed(offsets_list))
         data[variable_name]['base_address'] = address
 
     with open('Cheat Table/CheatTable_dict', 'wb') as dict_file:
