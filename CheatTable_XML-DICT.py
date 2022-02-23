@@ -1,12 +1,11 @@
 from bs4 import BeautifulSoup 
 import pickle
 
-threadstack0 = 0xb7fdc8
-
 def main():
-    file = open('Cheat Table/Towerfall.CT', 'r')
-    cheat_table  = BeautifulSoup(file.read(), 'xml') 
-    file.close()
+    with open('threadstack0-address.txt', 'r') as file:
+        threadstack0 = int(file.read(), 16)
+    with open('Cheat Table/Towerfall.CT', 'r') as file:
+        cheat_table  = BeautifulSoup(file.read(), 'xml') 
 
     data = {}
     cheat_entries = cheat_table.find_all('CheatEntry')
