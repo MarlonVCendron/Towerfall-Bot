@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup 
 import pickle
 
-threadstack0 = 0x14ff918
+threadstack0 = 0xb7fdc8
 
 def main():
     file = open('Cheat Table/Towerfall.CT', 'r')
