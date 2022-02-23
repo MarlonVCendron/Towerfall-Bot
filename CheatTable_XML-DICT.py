@@ -23,8 +23,8 @@ def main():
 
         variable_name = description.replace(" ", "").lower()
         data[variable_name] = {}
-        data[variable_name]['offsets'] = offsets_array
-        data[variable_name]['address'] = address
+        data[variable_name]['offsets'] = list(reversed(offsets_array))
+        data[variable_name]['base_address'] = address
 
     with open('Cheat Table/CheatTable_dict', 'wb') as dict_file:
         pickle.dump(data, dict_file)
