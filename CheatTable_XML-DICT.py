@@ -2,8 +2,7 @@ from bs4 import BeautifulSoup
 import pickle
 
 def main():
-    with open('threadstack0-address.txt', 'r') as file:
-        threadstack0 = int(file.read(), 16)
+    threadstack0 = int(input('THREADSTACK0: '), 16)
     with open('Cheat Table/Towerfall.CT', 'r') as file:
         cheat_table  = BeautifulSoup(file.read(), 'xml') 
 
