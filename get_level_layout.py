@@ -8,7 +8,7 @@ from grabscreen import grab_screen
 # cv2.createTrackbar('t1','aaa',0,255, empty)
 # cv2.createTrackbar('t2','aaa',0,255, empty)
 
-def main():
+def get_level_layout(flatten=True, show_image=False):
     # while True:
     #     screen = grab_screen(region=(0, 26, 960, 750))
     #     hsv_img = cv2.cvtColor(screen, cv2.COLOR_BGR2HSV)
@@ -33,15 +33,21 @@ def main():
     for i in range(0, height - grid_size, grid_size):
         for j in range(0, width - grid_size, grid_size):
             if 255 in mask[i:i+grid_size, j:j+grid_size]:
-                level_layout[i // grid_size , j // grid_size] = 255
+                level_layout[i // grid_size , j // grid_size] = 1
 
-    resized_dim = (width, height)
-    resized = cv2.resize(level_layout, resized_dim, interpolation = cv2.INTER_AREA)
-    while True:
-        cv2.imshow('level', resized)
-        if cv2.waitKey(33) & 0xFF in (ord('q'), 27):
-            break
+    if show_image:
+        resized_dim = (width, height)
+        resized = cv2.resize(level_layout, resized_dim, interpolation = cv2.INTER_AREA)
+        while True:
+            cv2.imshow('level', resized)
+            if cv2.waitKey(33) & 0xFF in (ord('q'), 27):
+                break
+
+    if flatten:
+        level_layout = level_layout.flatten()
+
+    return level_layout
 
 
 if __name__ == '__main__':
-    main()
+    print(get_level_layout(show_image=True))
