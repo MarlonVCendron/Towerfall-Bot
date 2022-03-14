@@ -1,5 +1,7 @@
+from time import sleep
 import cv2
 import numpy as np
+import time
 from grabscreen import grab_screen
 
 # def empty(x):
@@ -37,6 +39,7 @@ def get_level_layout(flatten=True, show_image=False):
 
     if show_image:
         resized_dim = (width, height)
+        print(resized_dim)
         resized = cv2.resize(level_layout, resized_dim, interpolation = cv2.INTER_AREA)
         while True:
             cv2.imshow('level', resized)
@@ -50,4 +53,5 @@ def get_level_layout(flatten=True, show_image=False):
 
 
 if __name__ == '__main__':
-    print(get_level_layout(show_image=True))
+    time.sleep(1)
+    get_level_layout(show_image=True)
